@@ -1,0 +1,141 @@
+{
+    "get": {
+        "sftp": {
+            "hostname": "usw2bdevhplussftp001.blob.core.windows.net",
+            "port": 22,
+            "username": "usw2bdevhplussftp001.hsil-output.hsiluser",
+            "remote_path": ".",
+            "files": [
+            "monthly_files/Factor_yyyyMM.csv", 
+            "monthly_files/Beta_HSC500_yyyyMM.csv",
+            "monthly_files/Beta_HSCA300_yyyyMM.csv",
+            "monthly_files/Beta_HSCAII_yyyyMM.csv",
+            "monthly_files/Beta_HSCASUSB_yyyyMM.csv",
+            "monthly_files/Beta_HSCEI_yyyyMM.csv",
+            "monthly_files/Beta_HSCI_yyyyMM.csv",
+            "monthly_files/Beta_HSCSOE_yyyyMM.csv",
+            "monthly_files/Beta_HSHCI_yyyyMM.csv",
+            "monthly_files/Beta_HSHKBIO_yyyyMM.csv",
+            "monthly_files/Beta_HSIESGS_yyyyMM.csv",
+            "monthly_files/Beta_HSIII_yyyyMM.csv",
+            "monthly_files/Beta_HSI_yyyyMM.csv",
+            "monthly_files/Beta_HSLMIV_yyyyMM.csv",
+            "monthly_files/Beta_HSSUSB_yyyyMM.csv",
+            "monthly_files/Beta_HSTECH_yyyyMM.csv",
+            "static/FactsetIdMapping.txt", 
+            "static/EntityMapping.txt", 
+            "CurrencyReturn/CurrencyReturn_latest.txt", 
+            "CurrencyReturn/CurrencyReturn_yyyy.txt"],
+            "proxy": {
+                "host": "192.168.192.9",
+                "port": 3128
+            }
+        },
+        "blob": {
+            "account_url": "",
+            "container_name": ""
+        },
+        "gcp": {
+            "bucket_name": "hsbc-11864599-hsidpapp-dev-indexlab-output-dev",
+            "target_project": "hsbc-11864599-hsidpapp-dev",
+            "secret_path": "projects/1008907797499/secrets/dpapp_id_rsa_sftp_wilshire_dev/versions/latest",
+            "folder": "input/",
+            "archive": "archive/"
+        }
+    },
+    "send": {
+        "sftp": {
+            "hostname": "usw2bdevhplussftp001.blob.core.windows.net",
+            "port": 22,
+            "username": "usw2bdevhplussftp001.hsiluser",
+            "remote_path" : ".",
+            "proxy": {
+                "host": "192.168.192.9",
+                "port": 3128
+            }
+        },
+        "blob": {
+            "account_url": "",
+            "container_name": "",
+            "files": [""]
+        },
+        "gcp": {
+            "bucket_name": "hsbc-11864599-hsidpapp-dev-indexlab-output-dev",
+            "target_project": "hsbc-11864599-hsidpapp-dev",
+            "folder": "input/",
+            "files": [
+            "idxIndex.csv", 
+            "index_level/date_str/eod_idx_date_str.csv", 
+            "daily_cons_files/date_str/HSC500_date_str.csv",
+            "daily_cons_files/date_str/HSCA300_date_str.csv",
+            "daily_cons_files/date_str/HSCAII_date_str.csv",
+            "daily_cons_files/date_str/HSCASUSB_date_str.csv",
+            "daily_cons_files/date_str/HSCEI_date_str.csv",
+            "daily_cons_files/date_str/HSCI_date_str.csv",
+            "daily_cons_files/date_str/HSCSOE_date_str.csv",
+            "daily_cons_files/date_str/HSHCI_date_str.csv",
+            "daily_cons_files/date_str/HSHKBIO_date_str.csv",
+            "daily_cons_files/date_str/HSIESGS_date_str.csv",
+            "daily_cons_files/date_str/HSIII_date_str.csv",
+            "daily_cons_files/date_str/HSI_date_str.csv",
+            "daily_cons_files/date_str/HSLMIV_date_str.csv",
+            "daily_cons_files/date_str/HSSUSB_date_str.csv",
+            "daily_cons_files/date_str/HSTECH_date_str.csv"],
+            "exception_list": ["stock_return", "factor_data","velocity_data"],
+            "secret_path": "projects/1008907797499/secrets/dpapp_id_rsa_sftp_wilshire_dev/versions/latest"
+        }
+    },
+    "zip": {
+        "source_bucket": "hsbc-11864599-hsidpapp-dev-indexlab-output-dev",
+        "destination_bucket": "hsbc-11864599-hsidpapp-dev-indexlab-output-dev",
+        "folder": "input/",
+        "files": [
+            "daily_cons_files/date_str/HSC500_date_str.csv",
+            "daily_cons_files/date_str/HSCA300_date_str.csv",
+            "daily_cons_files/date_str/HSCAII_date_str.csv",
+            "daily_cons_files/date_str/HSCASUSB_date_str.csv",
+            "daily_cons_files/date_str/HSCEI_date_str.csv",
+            "daily_cons_files/date_str/HSCI_date_str.csv",
+            "daily_cons_files/date_str/HSCSOE_date_str.csv",
+            "daily_cons_files/date_str/HSHCI_date_str.csv",
+            "daily_cons_files/date_str/HSHKBIO_date_str.csv",
+            "daily_cons_files/date_str/HSIESGS_date_str.csv",
+            "daily_cons_files/date_str/HSIII_date_str.csv",
+            "daily_cons_files/date_str/HSI_date_str.csv",
+            "daily_cons_files/date_str/HSLMIV_date_str.csv",
+            "daily_cons_files/date_str/HSSUSB_date_str.csv",
+            "daily_cons_files/date_str/HSTECH_date_str.csv",
+            "daily_cons_files/date_str/stock_return_date_str.csv'",
+            "monthly_files/Factor_yyyyMM.csv", 
+            "monthly_files/Beta_HSC500_yyyyMM.csv",
+            "monthly_files/Beta_HSCA300_yyyyMM.csv",
+            "monthly_files/Beta_HSCAII_yyyyMM.csv",
+            "monthly_files/Beta_HSCASUSB_yyyyMM.csv",
+            "monthly_files/Beta_HSCEI_yyyyMM.csv",
+            "monthly_files/Beta_HSCI_yyyyMM.csv",
+            "monthly_files/Beta_HSCSOE_yyyyMM.csv",
+            "monthly_files/Beta_HSHCI_yyyyMM.csv",
+            "monthly_files/Beta_HSHKBIO_yyyyMM.csv",
+            "monthly_files/Beta_HSIESGS_yyyyMM.csv",
+            "monthly_files/Beta_HSIII_yyyyMM.csv",
+            "monthly_files/Beta_HSI_yyyyMM.csv",
+            "monthly_files/Beta_HSLMIV_yyyyMM.csv",
+            "monthly_files/Beta_HSSUSB_yyyyMM.csv",
+            "monthly_files/Beta_HSTECH_yyyyMM.csv", 
+            "static/FactsetIdMapping.txt", 
+            "static/EntityMapping.txt", 
+            "CurrencyReturn/CurrencyReturn_latest.txt", 
+            "CurrencyReturn/CurrencyReturn_yyyy.txt",
+            "hsics.csv",
+            "shs_class.csv",
+            "review_dates.csv",
+            "quarterly_files/date_str/factor_data_date_str.csv",
+            "quarterly_files/date_str/velocity_data_date_str.csv"
+        ],
+        "output_folder": "output",
+        "target_project": "hsbc-11864599-hsidpapp-dev",
+        "option": ""
+    }
+,
+    "use": "gcp"
+}
